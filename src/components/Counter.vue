@@ -13,7 +13,6 @@ export default {
 </script>
 
 <style scoped>
-
 .single-counter {
   border: 1px solid black;
   margin-top: 20px;

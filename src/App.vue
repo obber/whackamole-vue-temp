@@ -54,6 +54,7 @@ export default {
     };
   },
   methods: {
+    // control game flow
     startRound: function () {
       this.timer = 20;
       this.whacks = 0;
@@ -70,6 +71,8 @@ export default {
       this.highScore = Math.max(whacks, highScore);
       this.gameActive = false;
     },
+
+    // timer logic
     startTimer: function () {
       this.timerInterval = setInterval(this.decrementTime.bind(this), 1000);
     },
@@ -88,6 +91,8 @@ export default {
         this.endRound();
       }
     },
+
+    // mole logic
     incrementWhacks: function (moleId) {
       const moles = this.moles.slice();
       moles[moleId] = false;
