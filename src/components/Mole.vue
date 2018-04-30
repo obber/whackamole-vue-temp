@@ -1,4 +1,5 @@
 <template>
+  <!-- try switching the "active" below to "inactive"! -->
   <div class="mole-container active">
     <div class="mole-image-container">
       <img
@@ -18,21 +19,7 @@
 
 <script>
 export default {
-  name: 'Mole',
-  props: ['active', 'id'],
-  methods: {
-    handleClick: function () {
-      if (this.active) {
-        this.$emit('whack', this.id);
-      }
-    }
-  },
-  computed: {
-    classObject: function () {
-      // use classObject to dynamically render class names based on props
-      // add the "active" or "inactive" class, based on the 'active' prop passed in
-    }
-  }
+  name: 'Mole'
 }
 </script>
 

@@ -8,22 +8,12 @@
       text="Start Round"
       v-on:click="startRound"
     >
-      Start Round
+      Open the Console, then click me!
     </button>
     <div class="counters-container">
-      <Counter
-        name="Whacks"
-      ></Counter>
-      <Counter
-        name="High Score"
-      ></Counter>
-      <Counter
-        name="Timer"
-      ></Counter>
+      <!-- Create 3 counters here! -->
     </div>
-    <Moles
-      v-on:whack="incrementWhacks"
-    ></Moles>
+    <!-- render your moles container here! -->
   </div>
 </template>
 
@@ -49,7 +39,11 @@ export default {
     };
   },
   methods: {
-
+    startRound: function() {
+      console.log('========= woah! =========');
+      console.log('Take a look at App.vue line 9 and line 42');
+      console.log('this is how you get something to run after a click!');
+    }
   }
 }
 </script>

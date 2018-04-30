@@ -7,8 +7,7 @@
 
 <script>
 export default {
-  name: 'Counter',
-  props: ['name', 'count'],
+  name: 'Counter'
 }
 </script>
 
