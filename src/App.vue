@@ -13,20 +13,15 @@
     <div class="counters-container">
       <Counter
         name="Whacks"
-        v-bind:count="whacks"
       ></Counter>
       <Counter
         name="High Score"
-        v-bind:count="highScore"
       ></Counter>
       <Counter
         name="Timer"
-        v-bind:count="timer"
       ></Counter>
     </div>
     <Moles
-      v-bind:game-active="gameActive"
-      v-bind:moles="moles"
       v-on:whack="incrementWhacks"
     ></Moles>
   </div>
@@ -54,57 +49,7 @@ export default {
     };
   },
   methods: {
-    // control game flow
-    startRound: function () {
-      this.timer = 20;
-      this.whacks = undefined; // fix me
-      this.gameActive = undefined; // fix me
-      this.deactivateAllMoles();
-      this.startTimer();
-      this.startMoles();
-    },
-    endRound: function () {
-      const { whacks, highScore } = this;
-      this.stopTimer();
-      this.stopMoles();
-      this.deactivateAllMoles();
-      this.highScore = 99; // fix me
-      this.gameActive = undefined; // fix me
-    },
 
-    // timer logic
-    startTimer: function () {
-
-    },
-    stopTimer: function () {
-
-    },
-    startMoles: function () {
-
-    },
-    stopMoles: function () {
-
-    },
-    decrementTime: function () {
-
-    },
-
-    // mole logic
-    incrementWhacks: function (moleId) {
-
-    },
-    activateRandomMole: function () {
-
-    },
-    activateMole: function (id) {
-
-    },
-    deactivateMole: function (id) {
-
-    },
-    deactivateAllMoles: function () {
-
-    }
   }
 }
 </script>

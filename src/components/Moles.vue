@@ -1,10 +1,8 @@
 <template>
   <div v-bind:class="classObject">
     <Mole
-      v-for="(moleState, idx) in moles"
+      v-for="(moleState, idx) in [0, 1]"
       v-bind:key="idx"
-      v-bind:active="moleState"
-      v-bind:id="idx"
       v-on:whack="handleWhack"
     >
     </Mole>
@@ -22,14 +20,14 @@ export default {
   props: ['gameActive', 'moles'],
   methods: {
     handleWhack: function (moleId) {
-      this.$emit('whack', moleId);
+
     }
   },
   computed: {
     classObject: function () {
       return {
         moles: true,
-        'game-active': !!this.gameActive,
+        'game-active': true // fix me
       }
     }
   },

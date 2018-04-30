@@ -1,5 +1,5 @@
 <template>
-  <div v-bind:class="classObject">
+  <div class="mole-container active">
     <div class="mole-image-container">
       <img
         v-on:click="handleClick"
@@ -29,11 +29,8 @@ export default {
   },
   computed: {
     classObject: function () {
-      return {
-        'mole-container': true,
-        active: this.active,
-        inactive: !this.active,
-      };
+      // use classObject to dynamically render class names based on props
+      // add the "active" or "inactive" class, based on the 'active' prop passed in
     }
   }
 }
