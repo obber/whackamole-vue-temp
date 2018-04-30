@@ -119,10 +119,6 @@ export default {
 </script>
 
 <style>
-/**
- *
- *  Globals
- */
 body {
   margin: 0;
   padding: 0;
@@ -133,10 +129,6 @@ button {
   font-family: 'Bungee', cursive;
 }
 
-/**
- *
- * Whackamole Component
- */
 .whackamole {
   max-width: 800px;
   width: 100%;
@@ -154,10 +146,12 @@ button {
   margin: 30px;
 }
 
-/**
- *
- * Button Component
- */
+.counters-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
 button {
   padding: 20px;
   border-radius: 3px;
@@ -171,95 +165,5 @@ button {
 
 button:hover {
   background-color: #72c9ea;
-}
-
-/**
- *
- * Counter Component
- */
-.counters-container {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
-}
-
-.single-counter {
-  border: 1px solid black;
-  margin-top: 20px;
-  padding: 20px;
-}
-
-.counters-container h1,
-.counters-container h2 {
-  margin: 0;
-  text-align: center;
-}
-
-.counters-container h1 {
-  font-size: 2.5em;
-  margin: 0;
-}
-
-/**
- *
- * Moles
- */
-.moles {
-  display: flex;
-  justify-content: space-between;
-  opacity: 0.5;
-  transition: opacity 0.3s ease;
-}
-
-.moles.game-active {
-  opacity: 1;
-}
-
-
-/**
- *
- * Mole Component
- */
-.mole-container {
-  width: 160px;
-  height: 160px;
-  display: inline-block;
-  margin: 10px;
-  position: relative;
-}
-
-.mole-image-container {
-  overflow: hidden;
-  width: 160px;
-  height: 140px;
-}
-
-.mole-container img {
-  display: block;
-  transition: all 0.3s ease;
-}
-
-.mole {
-  position: relative;
-  width: 60%;
-  margin: auto;
-  cursor: pointer;
-}
-
-.mole-container.active .mole {
-  /* display: block; */
-  top: 0px;
-}
-
-.mole-container.inactive .mole {
-  top: 200px;
-}
-
-.dirt {
-  width: 100%;
-  margin: auto;
-  z-index: 1;
-  position: absolute;
-  bottom: 0;
 }
 </style>

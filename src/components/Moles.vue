@@ -37,5 +37,14 @@ export default {
 </script>
 
 <style scoped>
+.moles {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
 
+.moles.game-active {
+  opacity: 1;
+}
 </style>
